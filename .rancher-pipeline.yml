@@ -1,13 +1,8 @@
-name: php-example
 stages:
-- name: Clone
-  steps:
-  - sourceCodeConfig: {}
 - name: Codeception test
   steps:
   - runScriptConfig:
       image: php:7.2
-      isShell: true
       shellScript: |-
         apt-get update
         apt-get install -y --no-install-recommends git zip libsqlite3-dev zlib1g-dev
