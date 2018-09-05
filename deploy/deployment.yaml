@@ -27,6 +27,8 @@ spec:
       labels:
         app: php-example
     spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
       containers:
       - name: php
         image: ${CICD_LOCAL_REGISTRY}/php-example:${CICD_EXECUTION_SEQUENCE}
