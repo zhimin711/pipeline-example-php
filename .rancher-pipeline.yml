@@ -21,6 +21,8 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: php-example:${CICD_EXECUTION_SEQUENCE}
+      pushRemote: true
+      registry: harbor2.12301.io
 - name: Deploy
   steps:
   - applyYamlConfig:
